@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — DocuBox</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #fafaf8;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --muted: #6b6b6b;
+      --accent: #2c2c2c;
+      --border: #e8e8e4;
+      --pill-bg: #f0f0ec;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 250, 248, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.25rem;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.875rem;
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 400;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    /* PAGE */
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 72px 2rem 100px;
+    }
+
+    .page-label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .page h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 0.5rem;
+    }
+
+    .page .subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.7;
+      font-weight: 300;
+      margin-bottom: 3rem;
+    }
+
+    /* FORM */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .field label {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .field input,
+    .field textarea {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--text);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      transition: border-color 0.2s;
+      outline: none;
+      width: 100%;
+    }
+
+    .field input:focus,
+    .field textarea:focus {
+      border-color: var(--text);
+    }
+
+    .field textarea {
+      resize: vertical;
+      min-height: 140px;
+    }
+
+    .submit-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--text);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.75rem 1.75rem;
+      cursor: pointer;
+      transition: opacity 0.2s;
+      align-self: flex-start;
+    }
+
+    .submit-btn:hover { opacity: 0.82; }
+
+    /* SUCCESS */
+    .success-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem;
+      text-align: center;
+      display: none;
+    }
+
+    .success-card h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.75rem;
+    }
+
+    .success-card p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    footer a:hover { color: var(--text); }
+
+    @media (max-width: 560px) {
+      .page { padding: 48px 1.5rem 80px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="index.html">DocuBox</a>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="page">
+    <p class="page-label">Support</p>
+    <h1>Contact Us</h1>
+    <p class="subtitle">Have a question or need help? Send us a message and we'll get back to you.</p>
+
+    <form
+      class="contact-form"
+      action="https://formsubmit.co/jj1111751@gmail.com"
+      method="POST"
+      id="contactForm"
+    >
+      <!-- Disable FormSubmit's default captcha page and redirect back here with ?success=true -->
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_next" value="contact.html?success=true" />
+      <input type="hidden" name="_subject" value="DocuBox Support Request" />
+
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required />
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required />
+      </div>
+
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="How can we help?" required></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+
+    <div class="success-card" id="successCard">
+      <h2>Message sent.</h2>
+      <p>Thanks for reaching out. We'll get back to you as soon as possible.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      © 2025 DocuBox &nbsp;·&nbsp;
+      <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="contact.html">Contact</a>
+    </p>
+  </footer>
+
+  <script>
+    // Show success message when redirected back after form submission
+    if (new URLSearchParams(window.location.search).get('success') === 'true') {
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('successCard').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
