@@ -222,42 +222,84 @@
   <main class="page">
     <p class="page-label">Legal</p>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: August 2, 2025</p>
+    <p class="updated">Last updated: November 15, 2026</p>
 
     <div class="policy-section">
       <h2>Overview</h2>
-      <p>At DocuBox, safeguarding your privacy is our foremost commitment. This Privacy Policy explains how we manage and protect your data when you use the DocuBox mobile application.</p>
+      <p>This policy explains what happens to your data when you use the DocuBox app for iPhone and iPad. DocuBox has no accounts and no servers of its own: the developer never receives your files, your passwords, or anything about how you use the app.</p>
     </div>
 
     <div class="policy-section">
-      <h2>Data Collection</h2>
-      <p>DocuBox does not collect, store, or share any personal information. Specifically, we do not engage in:</p>
+      <h2>What We Collect</h2>
+      <p>Nothing. DocuBox does not collect, store, or share personal information, and it contains no third-party analytics, advertising, or tracking code. Specifically, there is:</p>
       <ul>
-        <li>Analytics tracking</li>
-        <li>User behavior tracking</li>
-        <li>Advertising identifier collection</li>
-        <li>User registration processes</li>
+        <li>No analytics or usage tracking</li>
+        <li>No advertising or advertising identifiers</li>
+        <li>No account, sign-in, or registration</li>
+        <li>No sale or sharing of data with anyone</li>
       </ul>
     </div>
 
     <div class="policy-section">
-      <h2>Network Connections (SMB)</h2>
-      <p>If you opt to add an SMB (Server Message Block) server, your credentials are securely stored within the application. Access to your files occurs solely upon your initiation of the connection. No server data or credentials are transmitted to DocuBox or any third party.</p>
+      <h2>Your Files</h2>
+      <p>Your files are stored on your device. They leave it only when you send them somewhere yourself: to a server you added, to a nearby device you approved, to another app through the share sheet, or to a printer. Folders you keep in DocuBox also appear in the Files app, on the same device. If you have iCloud Backup or device backups turned on, Apple includes app data in them under your Apple Account; that is controlled in iOS Settings, not by DocuBox.</p>
     </div>
 
     <div class="policy-section">
-      <h2>Local Files &amp; Security</h2>
-      <p>Your files are never uploaded or synchronized unless you explicitly connect to a network drive. Face ID locking is optional and designed exclusively to protect local folders on your device. No biometric data is ever transmitted off your device.</p>
+      <h2>Servers You Add (SMB, SFTP, WebDAV)</h2>
+      <p>When you add a server, DocuBox connects directly from your device to that server and nowhere else. Passwords and keys are kept in the iOS Keychain on your device. What the server records about your connection is up to whoever runs it. SFTP and WebDAV over HTTPS are encrypted in transit; SMB is encrypted when the server supports it and you turn encryption on, and WebDAV over plain HTTP is not encrypted.</p>
     </div>
 
     <div class="policy-section">
-      <h2>Contact</h2>
-      <p>For any inquiries or concerns, please use our <a href="contact.html">contact page</a>.</p>
+      <h2>iCloud Sync</h2>
+      <p>DocuBox uses Apple's iCloud to keep your favorites, app settings, and saved server details (such as names, addresses, and usernames) the same across your own devices. Server passwords are not synced. This data is stored in your private iCloud account by Apple; the developer cannot see it. It applies only if you are signed in to iCloud.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>Nearby Sharing</h2>
+      <p>Nearby sharing sends files directly between devices running DocuBox on the same local network. Devices are paired with a PIN, each transfer has to be accepted, and transfers are encrypted. While you use it, your device's name is visible to other DocuBox users nearby. Nothing passes through a server.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>Built-in Web Browser</h2>
+      <p>The browser loads the websites you visit directly from your device. Those sites, and the search engine you choose in Settings (Google, DuckDuckGo, Bing, or one you set), receive your requests and searches as they would in any browser and handle them under their own privacy policies. Bookmarks, open tabs, cookies, and other website data stay on your device, and you can clear website data in the app. The developer does not see what you browse or download.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>Device Permissions</h2>
+      <p>DocuBox asks for a permission only when a feature needs it, and each can be changed in iOS Settings:</p>
+      <ul>
+        <li>Camera: to scan documents into PDFs. Scans and text recognition are processed on your device.</li>
+        <li>Photos: to import items you pick with the system photo picker, and to save a photo or video to your library when you ask. DocuBox does not browse your library.</li>
+        <li>Face ID or Touch ID: to unlock folders you have locked. Authentication is done by iOS; DocuBox never receives biometric data.</li>
+        <li>Local network: to find nearby devices and reach servers on your network.</li>
+        <li>Notifications: to tell you about transfers and incoming sharing requests.</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <h2>Search, Siri, and Widgets</h2>
+      <p>File names and text are indexed on your device so you can find them in the app and in Spotlight; locked folders are left out. Siri, Shortcuts, widgets, and Control Center controls work with the same on-device data. None of it is sent to the developer.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>Children</h2>
+      <p>DocuBox does not knowingly collect information from anyone, including children. Because it includes an unrestricted web browser, the app is rated 17+.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>This Website and Contact</h2>
+      <p>If you write to us through the <a href="contact.html">contact page</a>, the name, email address, and message you enter are delivered by a third-party form service (FormSubmit) and used only to reply to you. This website loads its fonts from Google Fonts.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>Changes</h2>
+      <p>If this policy changes, the new version will be posted on this page with a new date.</p>
     </div>
 
     <div class="summary-card">
       <h3>The short version.</h3>
-      <p>DocuBox is designed to give you complete control over your files — without cloud storage, tracking, or data collection. We do not seek your data. Our sole goal is to help you manage your files confidentially and independently.</p>
+      <p>DocuBox has no accounts, no tracking, and no servers of its own. Your files go only where you send them, and the developer never sees them.</p>
     </div>
 
     <div class="contact-row">
