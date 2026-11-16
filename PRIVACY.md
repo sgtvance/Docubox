@@ -1,40 +1,15 @@
 📄 DocuBox Privacy Policy
 
-Last updated: August 2, 2025
+Last updated: November 15, 2026
 
-At DocuBox, your privacy is our priority.
+The full policy is at https://sgtvance.github.io/Docubox/privacy-policy.html. In short:
 
-This privacy policy outlines how your data is handled when using the DocuBox mobile application.
-
-⸻
-
-🔒 Data Collection
-
-DocuBox does not collect, store, or share any personal data.
-	•	No analytics
-	•	No tracking
-	•	No advertising identifiers
-	•	No user registration
-
-All files remain locally stored on your device unless you explicitly connect to a network file share.
-
-⸻
-
-🔐 Network Connections (SMB)
-
-If you choose to add an SMB server:
-	•	Your credentials are stored within the app
-	•	Your files are accessed only when you initiate the connection
-	•	No server data is sent to us or any third party
-
-⸻
-
-📂 Local Files & Security
-
-Your files are never uploaded or synced unless you choose to:
-	•	Connect to a network drive
-
-Face ID locking is optional and used only to protect local folders — no biometric data ever leaves your device.
+	•	DocuBox has no accounts, no analytics, no advertising, and no servers of its own. The developer never receives your files, passwords, or usage data.
+	•	Files stay on your device unless you send them to a server you added (SMB, SFTP, WebDAV), a nearby device you approved, another app, or a printer.
+	•	Server passwords are kept in the iOS Keychain on your device.
+	•	Favorites, settings, and server details (not passwords) sync through your own iCloud account if you are signed in.
+	•	The built-in browser talks directly to the sites and search engine you choose; they handle your requests under their own policies.
+	•	Camera, Photos, Face ID, local network, and notification access are used only for the features that need them. No biometric data ever reaches DocuBox.
 
 ⸻
 
@@ -42,11 +17,3 @@ Face ID locking is optional and used only to protect local folders — no biomet
 
 If you have any questions or concerns, feel free to contact us at:
 jj1111751@gmail.com
-
-⸻
-
-✉️ Summary
-
-DocuBox is built to give you full control over your files — no cloud, no spying, and no tracking.
-
-We don’t want your data. We just want you to manage your files your way.
